@@ -1,0 +1,6 @@
+Issue: "FullCourse() incorrectly scores when four dice are the same"
+     - Reported by: Biplab Twati
+     - Description: FullCourse() returned 6 for [1, 1, 1, 1, 2] instead of 0, as it should only score for three of one number and two of another.
+     - Fix: Updated FullCourse() to use exact counts (3 in counts and 2 in counts) to ensure distinct numbers. Added test_full_course_invalid.
+     - Obstacles: Had to clarify Yatzy full house rules; initially tried a more complex loop-based solution.
+     - Concerns: Should add tests for other edge cases, like [2, 2, 2, 2, 2].
