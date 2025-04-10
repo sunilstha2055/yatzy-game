@@ -58,8 +58,8 @@ class Yatzy:
 
     def FullCourse(self):
         counts = [self.dice.count(i) for i in range(1, 7)]
-        has_three = any(c == 3 for c in counts)
-        has_two = any(c == 2 for c in counts)
+        has_three = 3 in counts
+        has_two = 2 in counts
         return sum(self.dice) if has_three and has_two else 0
 
     def Chance(self):

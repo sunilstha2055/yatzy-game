@@ -45,6 +45,9 @@ class TestYatzy(unittest.TestCase):
     def test_yatzy(self):
         self.game.dice = [5, 5, 5, 5, 5]
         self.assertEqual(self.game.Yatzy(), 50)
+    def test_full_course_invalid(self):
+        self.game.dice = [1, 1, 1, 1, 2]
+        self.assertEqual(self.game.FullCourse(), 0)
 
 if __name__ == '__main__':
     unittest.main()
